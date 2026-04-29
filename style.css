@@ -1,0 +1,343 @@
+:root {
+    --bg: #F5F0E6; /* beige background */
+    --card: #FFFCF7;
+    --text: #5A5247;
+    --text-light: #7D7367;
+    --accent: #E8DCCA;
+    --accent-hover: #DDD0BD;
+    --shadow: rgba(90, 82, 71, 0.08);
+    --shadow-hover: rgba(90, 82, 71, 0.12);
+    --angry: #F7D6D0;
+    --anxious: #F9E6C8;
+    --sad: #D4E4F7;
+    --overwhelmed: #E6D7F0;
+    --numb: #D9E8DD;
+    --restless: #F5E2C8;
+    --radius: 24px;
+    --radius-sm: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+    padding: 20px 12px 40px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0 30px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.mascot-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.mascot {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+.title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--text-light);
+    font-weight: 300;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.page {
+    display: none;
+    animation: fadeIn 0.5s ease-out;
+}
+
+    .page.active {
+        display: block;
+    }
+
+.emotion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.emotion-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 24px 16px 20px;
+    color: var(--text);
+    box-shadow: 0 4px 20px var(--shadow);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+    .emotion-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .emotion-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 30px var(--shadow-hover);
+    }
+
+        .emotion-card:hover::before {
+            opacity: 1;
+        }
+
+    .emotion-card[data-emotion="angry"]::before {
+        background: var(--angry);
+    }
+
+    .emotion-card[data-emotion="anxious"]::before {
+        background: var(--anxious);
+    }
+
+    .emotion-card[data-emotion="sad"]::before {
+        background: var(--sad);
+    }
+
+    .emotion-card[data-emotion="overwhelmed"]::before {
+        background: var(--overwhelmed);
+    }
+
+    .emotion-card[data-emotion="numb"]::before {
+        background: var(--numb);
+    }
+
+    .emotion-card[data-emotion="restless"]::before {
+        background: var(--restless);
+    }
+
+.monkey-face {
+    width: 70px;
+    height: 70px;
+    position: relative;
+}
+
+.emotion-label {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.emotion-page {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: clamp(24px, 5vw, 40px);
+    box-shadow: 0 4px 30px var(--shadow);
+    margin-top: 20px;
+}
+
+.emotion-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--bg);
+}
+
+    .emotion-header .monkey-face {
+        width: 60px;
+        height: 60px;
+        flex-shrink: 0;
+    }
+
+.emotion-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: var(--text);
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 10px var(--shadow);
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+    .back-btn:hover {
+        background: var(--accent-hover);
+        transform: translateX(-4px);
+    }
+
+.section {
+    margin-bottom: 36px;
+}
+
+    .section:last-child {
+        margin-bottom: 0;
+    }
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text);
+}
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.question-card {
+    background: var(--bg);
+    padding: 18px 20px;
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--accent);
+    transition: all 0.3s ease;
+}
+
+    .question-card:hover {
+        border-left-width: 5px;
+        transform: translateX(4px);
+    }
+
+.question-text {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.activity {
+    background: linear-gradient(135deg, var(--bg) 0%, var(--card) 100%);
+    padding: 24px;
+    border-radius: var(--radius-sm);
+    border: 2px dashed var(--accent);
+}
+
+.activity-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.activity-step {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.step-number {
+    background: var(--accent);
+    color: var(--text);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.step-text {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    padding-top: 3px;
+    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 16px 10px 30px;
+    }
+
+    .emotion-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .emotion-card {
+        padding: 20px 12px 16px;
+    }
+
+    .emotion-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}

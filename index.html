@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heidi's Safe Space</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="mascot-wrapper">
+                <!-- Bean - Main Mascot -->
+                <svg class="mascot" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="25" cy="40" rx="14" ry="18" fill="#D4A574" />
+                    <ellipse cx="25" cy="42" rx="9" ry="12" fill="#E8C4A0" />
+                    <ellipse cx="95" cy="40" rx="14" ry="18" fill="#D4A574" />
+                    <ellipse cx="95" cy="42" rx="9" ry="12" fill="#E8C4A0" />
+                    <circle cx="60" cy="60" r="38" fill="#D4A574" />
+                    <ellipse cx="60" cy="65" rx="28" ry="24" fill="#E8C4A0" />
+                    <circle cx="48" cy="58" r="4" fill="#5A5247" />
+                    <circle cx="72" cy="58" r="4" fill="#5A5247" />
+                    <circle cx="49" cy="56" r="1.5" fill="#FFFCF7" />
+                    <circle cx="73" cy="56" r="1.5" fill="#FFFCF7" />
+                    <ellipse cx="60" cy="67" rx="5" ry="3.5" fill="#C4956C" opacity="0.6" />
+                    <path d="M 50 73 Q 60 78 70 73" stroke="#5A5247" stroke-width="2" fill="none" stroke-linecap="round" />
+                    <circle cx="40" cy="70" r="4" fill="#F4B8B8" opacity="0.4" />
+                    <circle cx="80" cy="70" r="4" fill="#F4B8B8" opacity="0.4" />
+                </svg>
+            </div>
+            <h1 class="title">Heidi's Safe Space</h1>
+            <p class="subtitle">Welcome to our page. Answer a few questions with Bean and we will work on making you feel better.</p>
+        </header>
+
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <div class="emotion-grid">
+                <button class="emotion-card" data-emotion="angry">
+                    <svg class="monkey-face" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="15" cy="25" rx="10" ry="12" fill="#D4A574" />
+                        <ellipse cx="15" cy="26" rx="6" ry="8" fill="#E8C4A0" />
+                        <ellipse cx="65" cy="25" rx="10" ry="12" fill="#D4A574" />
+                        <ellipse cx="65" cy="26" rx="6" ry="8" fill="#E8C4A0" />
+                        <circle cx="40" cy="42" r="26" fill="#D4A574" />
+                        <ellipse cx="40" cy="45" rx="19" ry="16" fill="#E8C4A0" />
+                        <line x1="30" y1="38" x2="38" y2="42" stroke="#5A5247" stroke-width="2.5" stroke-linecap="round" />
+                        <line x1="42" y1="42" x2="50" y2="38" stroke="#5A5247" stroke-width="2.5" stroke-linecap="round" />
+                        <path d="M 33 52 Q 40 48 47 52" stroke="#5A5247" stroke-width="2" fill="none" stroke-linecap="round" />
+                    </svg>
+                    <span class="emotion-label">Angry</span>
+                </button>
+
+                <button class="emotion-card" data-emotion="anxious">
+                    <svg class="monkey-face" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="15" cy="25" rx="10" ry="12" fill="#D4A574" />
+                        <ellipse cx="15" cy="26" rx="6" ry="8" fill="#E8C4A0" />
+                        <ellipse cx="65" cy="25" rx="10" ry="12" fill="#D4A574" />
+                        <ellipse cx="65" cy="26" rx="6" ry="8" fill="#E8C4A0" />
+                        <circle cx="40" cy="42" r="26" fill="#D4A574" />
+                        <ellipse cx="40" cy="45" rx="19" ry="16" fill="#E8C4A0" />
+                        <circle cx="32" cy="40" r="4" fill="#5A5247" />
+                        <circle cx="48" cy="40" r="4" fill="#5A5247" />
+                        <path d="M 33 54 Q 40 51 47 54" stroke="#5A5247" stroke-width="2" fill="none" stroke-linecap="round" />
+                        <path d="M 28 35 Q 32 33 36 35" stroke="#5A5247" stroke-width="1.5" fill="none" />
+                        <path d="M 44 35 Q 48 33 52 35" stroke="#5A5247" stroke-width="1.5" fill="none" />
+                    </svg>
+                    <span class="emotion-label">Anxious</span>
+                </button>
+
+                <button class="emotion-card" data-emotion="sad">
+                    <svg class="monkey-face" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="15" cy="25" rx="10" ry="12" fill="#D4A574" />
+                        <ellipse cx="15" cy="26" rx="6" ry="8" fill="#E8C4A0" />
+                        <ellipse cx="65" cy="25" rx="10" ry="12" fill="#D4A574" />
+                        <ellipse cx="65" cy="26" rx="6" ry="8" fill="#E8C4A0" />
+                        <circle cx="40" cy="42" r="26" fill="#D4A574" />
+                        <ellipse cx="40" cy="45" rx="19" ry="16" fill="#E8C4A0" />
+                        <circle cx="32" cy="40" r="3.5" fill="#5A5247" />
+                        <circle cx="48" cy="40" r="3.5" fill="#5A5247" />
+                        <circle cx="28" cy="48" r="2" fill="#A8C4E8" opacity="0.7" />
+                        <path d="M 32 53 Q 40 50 48 53" stroke="#5A5247" stroke-width="2" fill="none" stroke-linecap="round" />
+                    </svg>
+                    <span class="emotion-label">Sad</span>
+                </button>
+
+                <button class="emotion-card" data-emotion="overwhelmed">
+                    <svg class="monkey-face" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="15" cy="25" rx="10" ry="12" fill="#D4A574" />
+                        <ellipse cx="15" cy="26" rx="6" ry="8" fill="#E8C4A0" />
+                        <ellipse cx="65" cy="25" rx="10" ry="12" fill="#D4A574" />
+                        <ellipse cx="65" cy="26" rx="6" ry="8" fill="#E8C4A0" />
+                        <circle cx="40" cy="42" r="26" fill="#D4A574" />
+                        <ellipse cx="40" cy="45" rx="19" ry="16" fill="#E8C4A0" />
+                        <circle cx="32" cy="41" r="3" fill="#5A5247" />
+                        <circle cx="48" cy="41" r="3" fill="#5A5247" />
+                        <ellipse cx="40" cy="54" rx="6" ry="5" fill="#5A5247" />
+                        <path d="M 27 34 Q 32 32 37 34" stroke="#5A5247" stroke-width="1.5" fill="none" />
+                        <path d="M 43 34 Q 48 32 53 34" stroke="#5A5247" stroke-width="1.5" fill="none" />
+                    </svg>
+                    <span class="emotion-label">Overwhelmed</span>
+                </button>
+
+                <button class="emotion-card" data-emotion="numb">
+                    <svg class="monkey-face" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="15" cy="25" rx="10" ry="12" fill="#D4A574" />
+                        <ellipse cx="15" cy="26" rx="6" ry="8" fill="#E8C4A0" />
+                        <ellipse cx="65" cy="25" rx="10" ry="12" fill="#D4A574" />
+                        <ellipse cx="65" cy="26" rx="6" ry="8" fill="#E8C4A0" />
+                        <circle cx="40" cy="42" r="26" fill="#D4A574" />
+                        <ellipse cx="40" cy="45" rx="19" ry="16" fill="#E8C4A0" />
+                        <line x1="28" y1="42" x2="36" y2="42" stroke="#5A5247" stroke-width="2.5" stroke-linecap="round" />
+                        <line x1="44" y1="42" x2="52" y2="42" stroke="#5A5247" stroke-width="2.5" stroke-linecap="round" />
+                        <line x1="34" y1="54" x2="46" y2="54" stroke="#5A5247" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    <span class="emotion-label">Numb</span>
+                </button>
+
+                <button class="emotion-card" data-emotion="restless">
+                    <svg class="monkey-face" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="15" cy="25" rx="10" ry="12" fill="#D4A574" />
+                        <ellipse cx="15" cy="26" rx="6" ry="8" fill="#E8C4A0" />
+                        <ellipse cx="65" cy="25" rx="10" ry="12" fill="#D4A574" />
+                        <ellipse cx="65" cy="26" rx="6" ry="8" fill="#E8C4A0" />
+                        <circle cx="40" cy="42" r="26" fill="#D4A574" />
+                        <ellipse cx="40" cy="45" rx="19" ry="16" fill="#E8C4A0" />
+                        <circle cx="32" cy="40" r="4" fill="#5A5247" />
+                        <circle cx="48" cy="40" r="4" fill="#5A5247" />
+                        <circle cx="33" cy="38" r="1.2" fill="#FFFCF7" />
+                        <circle cx="49" cy="38" r="1.2" fill="#FFFCF7" />
+                        <path d="M 30 35 Q 32 33 34 35" stroke="#5A5247" stroke-width="1.5" fill="none" />
+                        <path d="M 46 35 Q 48 33 50 35" stroke="#5A5247" stroke-width="1.5" fill="none" />
+                        <path d="M 33 53 Q 40 56 47 53" stroke="#5A5247" stroke-width="2" fill="none" stroke-linecap="round" />
+                    </svg>
+                    <span class="emotion-label">Restless</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="emotion-pages"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
